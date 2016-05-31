@@ -4,8 +4,8 @@
   "description": "xxHash in Javascript",
   "main": "xxhash.js",
   "scripts": {
-    "test": "mocha"
-  , "prepublish": "lmd build xxhash; lmd build xxhash.min"
+    "test": "nyc mocha",
+    "prepublish": "lmd build xxhash; lmd build xxhash.min"
   },
   "repository": {
     "type": "git",
@@ -19,12 +19,13 @@
   "bugs": {
     "url": "https://github.com/pierrec/js-xxhash/issues"
   },
-  "homepage": "https://github.com/pierrec/js-xxhash"
-, "dependencies": {
+  "homepage": "https://github.com/pierrec/js-xxhash",
+  "dependencies": {
     "cuint": "latest"
-  }
-, "devDependencies": {
-    "lmd": "1.11.x",
-    "benchmark": "*"
+  },
+  "devDependencies": {
+    "benchmark": "*",
+    "lmd": "^1.13.4",
+    "nyc": "^6.4.4"
   }
 }
